@@ -7,8 +7,12 @@
         <collection id="roomReservationsDc"
                     class="com.sample.hotel.entity.RoomReservation">
             <fetchPlan extends="_base">
-                <property name="booking" fetchPlan="_base">
-                    <property name="client" fetchPlan="_base"/>
+                <property name="booking" fetchPlan="_instance_name">
+                    <property name="client" fetchPlan="_instance_name">
+                        <property name="telephone"/>
+                    </property>
+                    <property name="numberOfGuests"/>
+                    <property name="departureDate"/>
                 </property>
                 <property name="room" fetchPlan="_base"/>
             </fetchPlan>
